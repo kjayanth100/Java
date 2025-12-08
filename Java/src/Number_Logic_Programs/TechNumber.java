@@ -10,6 +10,9 @@ public class TechNumber {
 		for(int i=1;i<=count/2;i++) {
 			div*=10;
 		}
+		if(div==num) {
+			return false;
+		}
 		int left=temp/div;
 		int right=temp%div;
 		int sum=left+right;
@@ -17,10 +20,15 @@ public class TechNumber {
 		return sum==temp;
 		}
 	public static void main(String[] args) {
-		if(isTech(2025)) {
-			System.out.println("Tech");
-		}else {
-			System.out.println("!Tech");
+//		if(isTech(2025)) {
+//			System.out.println("Tech");
+//		}else {
+//			System.out.println("!Tech");
+//		}
+		for(int i=1;i<=100;i++) {
+			if(isTech(i)) {
+				System.out.println(i);
+			}
 		}
 	}
 
